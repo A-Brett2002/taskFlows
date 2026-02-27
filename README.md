@@ -160,13 +160,10 @@
    13
    14 # 4. Ver quién es el siguiente en la cola (Front/Peek)
    15 curl -i http://localhost:3000/api/queue/next
-   16
    17 # 5. Atender/Procesar la siguiente tarea (Dequeue)
    18 curl -i -X DELETE http://localhost:3000/api/queue
-   19
    20 # 6. Ver la última acción registrada en la pila (Undo Peek)
    21 curl -i http://localhost:3000/api/undo/peek
-   22
    23 # 7. Deshacer la última acción (Undo Pop)
    24 curl -i -X DELETE http://localhost:3000/api/undo
 
