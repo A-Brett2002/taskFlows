@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlows - Gestor Empresarial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>🚀 TaskFlows - Panel de Control</h1>
+        
+        <section class="form-section card">
+            <h2>➕ Nueva Tarea</h2>
+            <div class="form-group">
+                <input type="text" id="taskTitle" placeholder="Título de la tarea">
+                <input type="text" id="employeeName" placeholder="Nombre del empleado">
+                <button onclick="addTask()">Crear Tarea</button>
+            </div>
+            <div id="undoSection" class="undo-box">
+                <span id="lastActionText">Sin acciones recientes</span>
+                <button id="undoBtn" onclick="undoAction()">Deshacer (Undo)</button>
+            </div>
+        </section>
+
+        <div class="dashboard-grid">
+            <!-- Backlog (Linked List) -->
+            <section class="card backlog-card">
+                <h2>📋 Backlog (Lista Enlazada)</h2>
+                <div id="backlogList" class="task-list"></div>
+            </section>
+
+            <!-- Processing Queue (Queue) -->
+            <section class="card queue-card">
+                <h2>⏳ Cola de Procesamiento (Queue)</h2>
+                <div id="queueList" class="task-list"></div>
+                <div class="actions">
+                    <button id="processBtn" onclick="processNext()">Atender Siguiente</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
