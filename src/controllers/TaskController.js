@@ -5,7 +5,7 @@ class TaskController {
     createTask(req, res) {
         const { title, employeeName } = req.body;
         if (!title) {
-            return res.status(400).json({ error: 'Title is required' });
+            return res.status(400).json({ error: ' 404 Title is required' });
         }
         const newTask = taskService.createTask(title, employeeName);
         res.status(201).json(newTask);
